@@ -1,21 +1,37 @@
 @charset "UTF-8";
 /* CSS Document */
+/*web font*/
+@font-face{
+  font-family: 'Oswald';
+  src: url('../font/Oswald.ttf') format("truetype");
+}
 @font-face {
+   font-family: 'Infinity';
+   src: url('../font/Infinity.ttf') format("truetype");
 
-   font-family: Groteskia;
-   src: url('../font/GROTESKIA.otf') format("opentype");
-
-   font-family: Infinity;
-   src: url('../font/Infinity.ttf') format("opentype");
-
-   font-family: Kokugl;
+   font-family: 'Kokugl';
    src: url('../font/kokugl.ttf') format("truetype");
 }
+.jp{
+  font-family: Kokugl;
+}
+/*/web font*/
+
+/*初期設定*/
 body {
   background: #27323d;
   color: #fff;
   font-size: 62.5%;/* rem変換 */
   font-family:Infinity;
+}
+/*/初期設定*/
+/*wrapper
+*********************************/
+#wrapper{
+  width:1000px;
+  margin:0 auto;
+  text-align: center;
+  font-size:1.4rem;
 }
 
 /*Nowloading
@@ -44,8 +60,12 @@ body {
   z-index: 2;
 }
 #loader img{
-  width:160px;
-  height:160px;
+  width:100%;
+  height:auto;
+}
+#loader p{
+  font-size: 1.8rem;
+  font-family:Infinity;
 }
 /* /Nowloading
 *********************************/
@@ -55,29 +75,28 @@ body {
 ***********************************/
 #header {
   width:100%;
-  font-family: Groteskia;
-  background: #1c262f;
+  background: ;
 }
-#header .inner {
-  overflow: hidden;
-  padding: 8px 0px 10px 0;
+
+#header .inner nav ul {
+  max-width:800px;
+  text-align:center;
+  margin:0 auto;
 }
-#header .inner h1 {
-  float: left;
-  font-size: 2.0rem;
+#header .inner nav ul li {
+  display:inline-block;
+  width:100px;
+  margin-right: 60px;
+  font-family: Oswald;
+  padding:16px 0 16px 0
 }
-#header .inner ul {
-  float: left;
-  font-size: 0.8rem;
-  margin: 20px 0 10px 20px;
+#header .inner nav ul li:last-child{
+  margin-right:0px;
 }
-#header .inner ul li {
-  float: left;
-  margin-right: 20px;
-}
-#header .inner ul li a {
+#header .inner nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-size:1.8rem;
 }
 
 #change {
@@ -91,30 +110,21 @@ body {
   padding: 8px 0 10px 0px;
   width:100%;
 }
-#change h1 {
-  font-size: 2rem;
-  float: left;
-  font-weight: bold;
-  color: #1c262f;
-}
 #change ul {
-  float: left;
+  text-align:center;
   font-size: 0.8rem;
   margin: 20px 0 10px 20px;
 }
 #change ul li {
-  float: left;
+  display:inline-block;
   margin-right: 20px;
 }
 #change ul li a {
   color: #1c262f;
   text-decoration: none;
+  font-size:2.0rem;
 }/*/header*/
 
 
 /*about
 ********************************************/
-section #introduction div.jp p{
-  font-family: Kokugl;
-  font-size:1.5rem;
-}
