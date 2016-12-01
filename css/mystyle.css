@@ -19,20 +19,39 @@
 
 /*初期設定*/
 body {
-  background: #27323d;
+  background: #1b1b1b;
   color: #fff;
   font-size: 62.5%;/* rem変換 */
   font-family:Infinity;
+  /*background-image: url(../img/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:#464646;
 }
+body::before{
+  z-index: 1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.6);*/
+}
+
 /*/初期設定*/
 /*wrapper
 *********************************/
 #wrapper{
-  width:1000px;
+  width:816px;
   margin:0 auto;
   text-align: center;
   font-size:1.4rem;
 }
+
 
 /*Nowloading
 ***********************************/
@@ -44,7 +63,7 @@ body {
   top: 0px;
   left: 0px;
   background: #000;
-  z-index: 1;
+  z-index: 4;
 }
 #loader {
   display: none;
@@ -57,7 +76,7 @@ body {
   margin-left: -100px;
   text-align: center;
   color: #fff;
-  z-index: 2;
+  z-index: 5;
 }
 #loader img{
   width:100%;
@@ -70,12 +89,33 @@ body {
 /* /Nowloading
 *********************************/
 
+#headerWrap{
+  position:relative;
+}
+#headerWrap div.icon{
+  width:35px;
+  height:auto;
+  position:absolute;
+  top:50%;
+  left:410px;
+  margin-top:-17px;
+  border-radius:3px;
+  box-shadow:0px 0px 9px 3px #4b4b4b;
+}
 
+#headerWrap div.icon a img{
+  width:100%;
+  height:auto;
+  margin:0;
+  padding:0;
+  vertical-align: bottom;
+}
 /*header
 ***********************************/
 #header {
   width:100%;
-  background: ;
+  height:60px;
+  background: #2b2b2b;
 }
 
 #header .inner nav ul {
@@ -85,46 +125,238 @@ body {
 }
 #header .inner nav ul li {
   display:inline-block;
-  width:100px;
-  margin-right: 60px;
-  font-family: Oswald;
-  padding:16px 0 16px 0
+  width:70px;
+  margin-right: 10px;
+  padding:23px 0 16px 0;
 }
+#header .inner nav ul li:first-child{
+  margin-right:20px;
+}
+
+#header .inner nav ul li:nth-child(2){
+  margin-right:60px;
+}
+#header .inner nav ul li:nth-child(3){
+  margin-left:60px;
+  margin-right:20px;
+}
+
+
 #header .inner nav ul li:last-child{
   margin-right:0px;
 }
 #header .inner nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size:1.8rem;
+  font-size:1.2rem;
+  vertical-align: bottom;
 }
+#header .inner nav ul li.icon a img{
+  width:30px;
+  height:auto;
+}
+#header .inner nav ul li.icon{
+  padding:0;
+}
+/*/header*/
 
-#change {
-  background: #f66f6f;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  display: none;
-  z-index: 9999;
-  padding: 8px 0 10px 0px;
-  width:100%;
+/*hero
+**********************************/
+#main .hero{
+  margin:200px auto 500px;
 }
-#change ul {
-  text-align:center;
-  font-size: 0.8rem;
-  margin: 20px 0 10px 20px;
-}
-#change ul li {
-  display:inline-block;
-  margin-right: 20px;
-}
-#change ul li a {
-  color: #1c262f;
-  text-decoration: none;
-  font-size:2.0rem;
-}/*/header*/
-
-
 /*about
 ********************************************/
+section#about{
+  padding-top:80px;/*スライド用余白*/
+  margin-bottom:800px;
+  position:relative;
+}
+section#about h2{
+  font-size:3.0rem;
+}
+section#about ul li a{
+  font-size:1.4rem;
+}
+/*about総括設定*/
+span.big{
+  font-size:2.0rem;
+  font-weight:bold;
+  text-decoration:underline;
+}
+/*about1
+*************************************/
+div#about1 img{
+  width:150px;
+  height:150px;
+  border-radius:75px;
+}
+div#about1 .name{
+  margin:5px 0 20px;
+}
+div#about1 .name p{
+  font-size:1.0rem;
+  font-weight:bold;
+  letter-spacing: 3px;
+}
+
+div#about1 .name p.jp{
+  font-size:2.0rem;
+  font-weight:bold;
+}
+/*about2
+*************************************/
+div#about2{
+  text-align:left;
+}
+/*about3
+*************************************/
+/*about4
+*************************************/
+/*about5
+*************************************/
+/*about6
+*************************************/
+
+
+/*create
+*****************************************************/
+section#create{
+  padding-top:80px;/*スライド用余白*/
+  margin-bottom:800px;/*スペース空けマージン*/
+  position:relative;
+}
+section#create h2{
+  font-size:3.0rem;
+}
+section#create ul li a{
+  font-size:1.4rem;
+}
+/*create1
+*************************************/
+
+/*create2
+*************************************/
+
+/*create3
+*************************************/
+
+/*タブ実装用about
+*********************************************/
+.tab-content_a {
+  width:816px;
+  height:auto;
+	transition: all .3s;
+	opacity: 0;
+}
+.tab-content_a.is_show_a {
+	opacity: 1;
+}
+.tabrow_a {
+	margin: 30px 0 0;
+	padding: 0 20px 0 15px;
+  text-align:left;
+}
+.tabrow_a li {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+}
+.tabrow_a li + li a {
+	margin-left: -5px;
+}
+.tabrow_a a {
+	background-color: #ccc;
+	border-radius: 6px 6px 0 0;
+	box-shadow: inset 0 -6px 10px 0px #aaa;
+	color: #000;
+	display: block;
+	font-size: 14px;
+	padding: 7px 30px;
+	position: relative;
+	text-decoration: none;
+	transition: all .3s;
+	transform-origin: 50% 90%;
+}
+.tabrow_a .is_active_a {
+	background-color: #eee;
+	box-shadow: none;
+	font-weight: bold;
+	z-index:1;
+	transform: scale(1.2);
+}
+
+.tab-content_a {
+	background-color: #282828;
+	border: 1px solid #eee;
+  border-bottom:none;
+  border-radius:0 10px 0px 0;
+	box-shadow: 0 1px 0 0 #eee;
+	padding: 30px 20px;
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+}
+/*タブ実装用create
+*********************************************/
+.tab-content_c {
+  width:816px;
+  height:auto;
+	transition: all .3s;
+	opacity: 0;
+}
+.tab-content_c.is_show_c {
+	opacity: 1;
+}
+.tabrow_c {
+	margin: 30px 0 0;
+	padding: 0 20px 0 15px;
+  text-align:left;
+}
+.tabrow_c li {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+}
+.tabrow_c li + li a {
+	margin-left: -5px;
+}
+.tabrow_c a {
+	background-color: #ccc;
+	border-radius: 6px 6px 0 0;
+	box-shadow: inset 0 -6px 10px 0px #aaa;
+	color: #000;
+	display: block;
+	font-size: 14px;
+	padding: 7px 30px;
+	position: relative;
+	text-decoration: none;
+	transition: all .3s;
+	transform-origin: 50% 90%;
+}
+.tabrow_c .is_active_c {
+	background-color: #eee;
+	box-shadow: none;
+	font-weight: bold;
+	z-index:1;
+	transform: scale(1.2);
+}
+
+.tab-content_c {
+	background-color: #282828;
+	border: 1px solid #eee;
+  border-bottom:none;
+  border-radius:0 10px 0px 0;
+	box-shadow: 0 1px 0 0 #eee;
+	padding: 30px 20px;
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+/*GET IN TOUCH
+**************************************/
+section#contact{
+  width:100%;
+}
