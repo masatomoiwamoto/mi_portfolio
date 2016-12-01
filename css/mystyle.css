@@ -23,25 +23,14 @@ body {
   color: #fff;
   font-size: 62.5%;/* rem変換 */
   font-family:Infinity;
-  /*background-image: url(../img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color:#464646;
-}
-body::before{
-  z-index: 1;
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color:rgba(0,0,0,0.6);*/
-}
 
+}
 /*/初期設定*/
 /*wrapper
 *********************************/
@@ -63,7 +52,7 @@ body::before{
   top: 0px;
   left: 0px;
   background: #000;
-  z-index: 4;
+  z-index:1000;
 }
 #loader {
   display: none;
@@ -76,7 +65,7 @@ body::before{
   margin-left: -100px;
   text-align: center;
   color: #fff;
-  z-index: 5;
+  z-index: 1001;
 }
 #loader img{
   width:100%;
@@ -89,59 +78,37 @@ body::before{
 /* /Nowloading
 *********************************/
 
-#headerWrap{
-  position:relative;
-}
-#headerWrap div.icon{
-  width:35px;
-  height:auto;
-  position:absolute;
-  top:50%;
-  left:410px;
-  margin-top:-17px;
-  border-radius:3px;
-  box-shadow:0px 0px 9px 3px #4b4b4b;
-}
-
-#headerWrap div.icon a img{
-  width:100%;
-  height:auto;
-  margin:0;
-  padding:0;
-  vertical-align: bottom;
-}
 /*header
 ***********************************/
 #header {
   width:100%;
   height:60px;
   background: #2b2b2b;
+  position:fixed;
+  top:0;
+  left:0;
+  transition: .3s;
+  z-index:999;
 }
 
 #header .inner nav ul {
-  max-width:800px;
+  width:816px;
   text-align:center;
   margin:0 auto;
+  position:relative;
 }
 #header .inner nav ul li {
   display:inline-block;
   width:70px;
-  margin-right: 10px;
+  margin-right: 15px;
   padding:23px 0 16px 0;
 }
-#header .inner nav ul li:first-child{
-  margin-right:20px;
-}
-
 #header .inner nav ul li:nth-child(2){
-  margin-right:60px;
+  margin-right:45px;
 }
-#header .inner nav ul li:nth-child(3){
-  margin-left:60px;
-  margin-right:20px;
+#header .inner nav ul li:nth-child(4){
+  margin-left:45px;
 }
-
-
 #header .inner nav ul li:last-child{
   margin-right:0px;
 }
@@ -150,13 +117,35 @@ body::before{
   text-decoration: none;
   font-size:1.2rem;
   vertical-align: bottom;
+  transition: .3s;
 }
+#header .inner nav ul li.icon{
+  width:30px;
+  padding:0;
+  position:absolute;
+  top:16px;
+  left:50%;
+  margin-left:-20px;
+  box-shadow:0px 0px 9px 3px #4b4b4b;
+  transition: transform 0.2s linear;
+}
+#header .inner nav ul li.icon:hover{
+  transform: scale(1.2);
+
+}
+#header .inner nav ul li.icon a{
+  overflow:hidden;
+}
+
 #header .inner nav ul li.icon a img{
   width:30px;
   height:auto;
+  vertical-align: bottom;
+  transition: transform 0.2s linear;
+
 }
-#header .inner nav ul li.icon{
-  padding:0;
+#header .inner nav ul li.icon a img:hover{
+  transform: scale(1.0);
 }
 /*/header*/
 
@@ -164,6 +153,7 @@ body::before{
 **********************************/
 #main .hero{
   margin:200px auto 500px;
+  padding-top:60px;
 }
 /*about
 ********************************************/
@@ -223,7 +213,7 @@ div#about2{
 *****************************************************/
 section#create{
   padding-top:80px;/*スライド用余白*/
-  margin-bottom:800px;/*スペース空けマージン*/
+  margin-bottom:500px;/*スペース空けマージン*/
   position:relative;
 }
 section#create h2{
@@ -360,3 +350,80 @@ section#create ul li a{
 section#contact{
   width:100%;
 }
+section#contact h2{
+  font-size:3.0rem;
+}
+section#contact div.form-info{
+  width:50%;
+  font-size:1.0rem;
+}
+.form-container {
+   background-image: -ms-linear-gradient(top, #2b2b2b 0%, #2b2b2b 100%);
+   border-radius: 8px;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width:300px;
+   padding:20px;
+   width:50%;
+   }
+.form-field {
+   border: 0px solid #0091ff;
+   background: #ffffff;
+   border-radius: 6px;
+   color: #2b2b2b;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 1px 1px;
+   padding:8px;
+   margin-bottom:20px;
+   width:280px;
+   }
+.form-field:focus {
+   background: #ffffff;
+   color: #2b2b2b;
+   }
+.form-container h2 {
+   text-shadow: #000000 0 1px 0;
+   font-size:1.4rem;
+   margin: 0 0 10px 0;
+   text-align:left;
+    }
+.form-title {
+   margin-bottom:10px;
+   color: #ffffff;
+   text-shadow: #000000 0 1px 0;
+   text-align:left;
+   font-size:1.0rem;
+   letter-spacing: 2px;
+   }
+.submit-container {
+   margin:8px 0;
+   text-align:right;
+   }
+.submit-button {
+   border: 0px solid #002185;
+   background: #0088ff;
+   background-image: -ms-linear-gradient(top, #0088ff 0%, #0088ff 100%);
+   border-radius: 5px;
+   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+   text-shadow: #063642 0 1px 0;
+   color: #ffffff;
+   font-family: helvetica, serif;
+   padding: 8.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.submit-button:hover {
+   border: 0px solid #002185;
+   text-shadow: #063642 0 1px 0;
+   background: #8cc9ff;
+   background-image: -ms-linear-gradient(top, #8cc9ff 0%, #8cc9ff 100%);
+   color: #fff;
+   }
+.submit-button:active {
+   text-shadow: #8cc9ff 0 1px 0;
+   border: 0px solid #002185;
+   background: #ffffff;
+   background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+   color: #8cc9ff;
+   }
