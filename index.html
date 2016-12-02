@@ -5,6 +5,9 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/mystyle.css">
   <!--/css-->
+  <!--favicon-->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <!--/favicon-->
   <!--meta-->
   <meta charset="utf-8">
   <meta name="keyword" content="岩本正智,ポートフォリオ,新米,WEBプログラマー,WEBアプリケーション">
@@ -29,24 +32,20 @@
 
 <!--上部に表示されているnav
 ---------------------------------------------------->
- <div id="headerWrap">
  <header id="header">
   <div class="inner">
    <nav>
-    <ul><li><a href="#">HOME</a></li><li><a href="#">ABOUT</a></li><li><a href="#">CREATE</a></li><li><a href="#">CONNECT</a></li></ul>
+    <ul><li><a href="#wrapper">HOME</a></li><li><a href="#about">ABOUT</a></li><li class="icon"><a href="#wrapper"><img src="img/icon.png"></a></li><li><a href="#create">CREATE</a></li><li><a href="#contact">CONTACT</a></li></ul>
    </nav><!--/nav-->
  </div><!-- .inner div -->
  </header><!--/header-->
- <div class="icon">
-   <a href="#header"><img src="img/icon.png" alt="icon"></a>
- </div>
-</div><!--/headerWrap-->
+<div class="bg"></div>
 <div id="wrapper">
  <main id="main">
    <div class="hero">
      <h1><img src="img/hero.png" alt="hero"></h1>
      <div class="downbtn">
-       <img src="#" alt="down">
+       <img src="img/skill_icon/down.png" alt="down">
      </div>
    </div><!--hero-->
 
@@ -83,25 +82,24 @@
        </div>
      </div>
      <div id="about3" class="tab-content_a">
-       <ul>
-         <li>Photoshop</li>
-         <li>illustrator</li>
-         <li>DreamWeaver</li>
-         <li>SAI</li>
-         <li>Maya</li>
-       </ul>
+         <img src="img/skill_icon/ps-icon.png">
+         <img src="img/skill_icon/ai-icon.png">
+         <img src="img/skill_icon/dw-icon.png">
+         <img src="img/skill_icon/ae-icon.png">
+         <img src="img/skill_icon/maya-icon.png">
+         <img src="img/skill_icon/sai-icon.png">
      </div>
      <div id="about4" class="tab-content_a">
        <div class="skillList">
-       <img src="#" alt="HTML5">
-       <img src="#" alt="CSS">
-       <img src="#" alt="Javascript">
-       <img src="#" alt="Jquery">
-       <img src="#" alt="Ruby">
-       <img src="#" alt="Ruby on rails">
-       <img src="#" alt="PHP">
-       <img src="#" alt="MYSQL">
-       <img src="#" alt="Vagrant">
+       <img src="img/skill_icon/html5-icon.png" alt="HTML5">
+       <img src="img/skill_icon/css3-icon.png" alt="CSS">
+       <img src="img/skill_icon/js-icon.png" alt="Javascript">
+       <img src="img/skill_icon/jquery-icon.png" alt="Jquery">
+       <img src="img/skill_icon/ruby-icon.png" alt="Ruby">
+       <img src="img/skill_icon/rubyOnRails.png" alt="Ruby on rails">
+       <img src="img/skill_icon/php-icon.png" alt="PHP">
+       <img src="img/skill_icon/mysql-icon.png" alt="MYSQL">
+       <img src="img/skill_icon/vagrant-icon.png" alt="Vagrant">
      </div>
      </div>
      <div id="about5"  class="tab-content_a">
@@ -163,11 +161,33 @@
    </section><!--create-->
    <section id="contact">
      <h2>GET IN TOUCH</h2>
+     <div class="contactWrap">
+     <div class="form-info">
+       <p>今回は岩本正智のポートフォリオを閲覧頂き、ありがとうございます。
+         ポートフォリオを閲覧し、「まあ、面接呼んでやってもいいかな」
+         と少しでもお思いになってくれた神様のような採用担当様。是非こちらからお名前
+         メールアドレス、ご用件をお書きになって送信ボタンをクリックして
+       連絡して頂けると幸いです。頂きましたメールには、内容を確認次第
+       迅速にお返事致します。</p>
+      </p>
+     </div>
+     <form class="form-container">
+      <div class="form-title"><h2>CONTACT</h2></div>
+      <div class="form-title">Name</div>
+      <input class="form-field" type="text" name="firstname" /><br />
+      <div class="form-title">Email</div>
+      <input class="form-field" type="text" name="email" /><br />
+      <div class="submit-container">
+      <input class="submit-button" type="submit" value="Submit" />
+      </div>
+    </form>
      <div class="contactIcon">
+       <p>or</p>
      <a href="mailto:phyj.0d0@gmail.co.jp?subject=feedback">email me</a>
      <a>github</a>
      <a>twitter</a>
    </div>
+  </div>
    </section>
    <footer>
      <small>Copyright &copy; 2016 M.Iwamoto All Rights Reserved.</small>
@@ -178,12 +198,12 @@
 <!--            Jquery           -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!--            script           -->
+<script src="js/s_scroll.js"></script>
+<script src="js/header_scroll.js"></script>
 <script src="js/content_tab_c.js"></script>
 <script src="js/content_tab_a.js"></script>
-<script src="js/slide_h.js"></script><!--change header-->
 <script src="js/nowloading.js"></script>
-<script src="js/content_change.js"></script>
+<!--<script src="js/content_change.js"></script>-->
 <script src="js/move.js"></script>
-
 </body>
 </html>

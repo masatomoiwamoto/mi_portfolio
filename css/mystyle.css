@@ -1,10 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 /*web font*/
-@font-face{
-  font-family: 'Oswald';
-  src: url('../font/Oswald.ttf') format("truetype");
-}
 @font-face {
    font-family: 'Infinity';
    src: url('../font/Infinity.ttf') format("truetype");
@@ -201,8 +197,14 @@ div#about2{
 }
 /*about3
 *************************************/
+#about3 img{
+  width:100px;
+}
 /*about4
 *************************************/
+#about4 img{
+  width:100px;
+}
 /*about5
 *************************************/
 /*about6
