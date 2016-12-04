@@ -35,7 +35,7 @@
  <header id="header">
   <div class="inner">
    <nav>
-    <ul><li><a href="#wrapper">HOME</a></li><li><a href="#about">ABOUT</a></li><li class="icon"><a href="#wrapper"><img src="img/icon.png"></a></li><li><a href="#create">CREATE</a></li><li><a href="#contact">CONTACT</a></li></ul>
+    <ul><li><a href="#wrapper">HOME</a></li><li><a href="#about">ABOUT</a></li><li class="icon"><a href="#wrapper"><img src="img/icon_off.png"></a></li><li><a href="#create">CREATE</a></li><li><a href="#contact">CONTACT</a></li></ul>
    </nav><!--/nav-->
  </div><!-- .inner div -->
  </header><!--/header-->
@@ -45,13 +45,13 @@
    <div class="hero">
      <h1><img src="img/hero.png" alt="hero"></h1>
      <div class="downbtn">
-       <img src="img/skill_icon/down.png" alt="down">
+       <a href="#about"><img src="img/skill_icon/down.png" alt="down"></a>
      </div>
    </div><!--hero-->
 
    <section id="about">
      <h2>ABOUT ME</h2>
-     <ul class="tabrow_a">
+     <ul class="tabrow_a tabs">
        <li><a href="#about1">Introduce</a></li><li><a href="#about2">History</a></li><li><a href="#about3">Tools</a></li><li><a href="#about4">Skills</a></li><li><a href="#about5">Learning</a></li><li><a href="#about6">Favorite</a></li>
      </ul>
      <div id="about1" class="tab-content_a">
@@ -94,10 +94,10 @@
        <img src="img/skill_icon/html5-icon.png" alt="HTML5">
        <img src="img/skill_icon/css3-icon.png" alt="CSS">
        <img src="img/skill_icon/js-icon.png" alt="Javascript">
+       <img src="img/skill_icon/php-icon.png" alt="PHP">
        <img src="img/skill_icon/jquery-icon.png" alt="Jquery">
        <img src="img/skill_icon/ruby-icon.png" alt="Ruby">
        <img src="img/skill_icon/rubyOnRails.png" alt="Ruby on rails">
-       <img src="img/skill_icon/php-icon.png" alt="PHP">
        <img src="img/skill_icon/mysql-icon.png" alt="MYSQL">
        <img src="img/skill_icon/vagrant-icon.png" alt="Vagrant">
      </div>
@@ -123,7 +123,7 @@
 
    <section id="create">
      <h2>CREATE</h2>
-     <ul class="tabrow_c">
+     <ul class="tabrow_c tabs">
        <li><a href="#create1">server side</a></li>
        <li><a href="#create2">client side</a></li>
        <li><a href="#create3">3D/2D</a></li>
@@ -163,9 +163,11 @@
      <h2>GET IN TOUCH</h2>
      <div class="contactWrap">
      <div class="form-info">
+       <h3>最後に</h3>
        <p>今回は岩本正智のポートフォリオを閲覧頂き、ありがとうございます。
          ポートフォリオを閲覧し、「まあ、面接呼んでやってもいいかな」
-         と少しでもお思いになってくれた神様のような採用担当様。是非こちらからお名前
+         と少しでもお思いになってくれた神様のような採用担当様。</p>
+      <p class="info-b">是非こちらからお名前
          メールアドレス、ご用件をお書きになって送信ボタンをクリックして
        連絡して頂けると幸いです。頂きましたメールには、内容を確認次第
        迅速にお返事致します。</p>
@@ -177,15 +179,17 @@
       <input class="form-field" type="text" name="firstname" /><br />
       <div class="form-title">Email</div>
       <input class="form-field" type="text" name="email" /><br />
+      <div class="form-title">message</div>
+      <textarea cols="50" rows="10" placeholder="こちらにご用件をお書き下さい。(500文字まで)"></textarea>
       <div class="submit-container">
-      <input class="submit-button" type="submit" value="Submit" />
+      <input class="submit-button" type="submit" value="送信">
       </div>
     </form>
      <div class="contactIcon">
        <p>or</p>
-     <a href="mailto:phyj.0d0@gmail.co.jp?subject=feedback">email me</a>
-     <a>github</a>
-     <a>twitter</a>
+     <a href="mailto:phyj.0d0@gmail.com?subject=feedback"><img src="img/contact_icon/email-icon.png"></a>
+     <a href="https://github.com/masatomoiwamoto" target="_blank"><img src="img/contact_icon/github-icon.png"></a>
+     <a href="https://twitter.com/m_i_se" target="_blank"><img src="img/contact_icon/twitter-icon.png"></a>
    </div>
   </div>
    </section>
@@ -200,6 +204,8 @@
 <!--            script           -->
 <script src="js/s_scroll.js"></script>
 <script src="js/header_scroll.js"></script>
+<script src="js/header_down.js"></script>
+<script src="js/icon_change.js"></script>
 <script src="js/content_tab_c.js"></script>
 <script src="js/content_tab_a.js"></script>
 <script src="js/nowloading.js"></script>

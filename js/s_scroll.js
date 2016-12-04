@@ -1,7 +1,9 @@
 $(function(){
    // #で始まるアンカーをクリックした場合に処理
    $('a[href^="#"]').click(function() {
-
+     if($(this).parent().parent().hasClass('tabs')){
+       return false;
+     }
       // スクロールの速度
       var speed = 1000; // ミリ秒
       // アンカーの値取得

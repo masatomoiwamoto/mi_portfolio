@@ -81,7 +81,7 @@ body {
   height:60px;
   background: #2b2b2b;
   position:fixed;
-  top:0;
+  top:-60px;
   left:0;
   transition: .3s;
   z-index:999;
@@ -123,7 +123,7 @@ body {
   left:50%;
   margin-left:-20px;
   box-shadow:0px 0px 9px 3px #4b4b4b;
-  transition: transform 0.2s linear;
+  transition: all 0.2s linear;
 }
 #header .inner nav ul li.icon:hover{
   transform: scale(1.2);
@@ -150,6 +150,13 @@ body {
 #main .hero{
   margin:200px auto 500px;
   padding-top:60px;
+  position:relative;
+}
+#main .hero .downbtn{
+  position:absolute;
+  top:350px;
+  left:50%;
+  margin-left:-15px;
 }
 /*about
 ********************************************/
@@ -165,10 +172,6 @@ section#about ul li a{
   font-size:1.4rem;
 }
 /*about総括設定*/
-span.big{
-  font-size:2.0rem;
-  font-weight:bold;
-  text-decoration:underline;
 }
 /*about1
 *************************************/
@@ -199,11 +202,21 @@ div#about2{
 *************************************/
 #about3 img{
   width:100px;
+  float:left;
+  margin-right:20px;
+}
+#about3 img:first-child{
+  margin-left:35px;
 }
 /*about4
 *************************************/
 #about4 img{
   width:100px;
+  float:left;
+  margin-right:20px;
+}
+#about4 img:nth-child(6n+1){
+  margin-left:35px;
 }
 /*about5
 *************************************/
@@ -354,20 +367,42 @@ section#contact{
 }
 section#contact h2{
   font-size:3.0rem;
+  margin-bottom:30px;
 }
-section#contact div.form-info{
-  width:50%;
+section#contact .contactWrap{
+ width:100%;
+ overflow:hidden;
+}
+section#contact .contactWrap div.form-info{
+  width:45%;
   font-size:1.0rem;
+  float:left;
+  line-height:1.5;
+  padding-right:30px;
+  padding-left:10px;
+  margin-top:80px;
+  font-family:Kokugl;
 }
-.form-container {
+section#contact .contactWrap div.form-info h3{
+  font-size:3.0rem;
+  margin-bottom:10px;
+  font-family:Kokugl;
+}
+
+section#contact .contactWrap div.form-info p.info-b{
+margin-top:10px;
+}
+
+form.form-container {
    background-image: -ms-linear-gradient(top, #2b2b2b 0%, #2b2b2b 100%);
-   border-radius: 8px;
+   border-left:1px solid #fff;
    font-family: 'Helvetica Neue',Helvetica,sans-serif;
    text-decoration: none;
    vertical-align: middle;
    min-width:300px;
-   padding:20px;
-   width:50%;
+   width:45%;
+   float:left;
+   padding-left:30px;
    }
 .form-field {
    border: 0px solid #0091ff;
@@ -386,8 +421,10 @@ section#contact div.form-info{
 .form-container h2 {
    text-shadow: #000000 0 1px 0;
    font-size:1.4rem;
+   font-family:Infinity;
    margin: 0 0 10px 0;
    text-align:left;
+   font-weight:normal;
     }
 .form-title {
    margin-bottom:10px;
@@ -396,9 +433,11 @@ section#contact div.form-info{
    text-align:left;
    font-size:1.0rem;
    letter-spacing: 2px;
+   font-family:Infinity;
    }
 .submit-container {
-   margin:8px 0;
+  width:90%;
+   margin:20px 0;
    text-align:right;
    }
 .submit-button {
@@ -409,7 +448,7 @@ section#contact div.form-info{
    box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
    text-shadow: #063642 0 1px 0;
    color: #ffffff;
-   font-family: helvetica, serif;
+   font-family: Kokugl;
    padding: 8.5px 18px;
    font-size: 14px;
    text-decoration: none;
@@ -429,3 +468,36 @@ section#contact div.form-info{
    background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
    color: #8cc9ff;
    }
+   textarea{
+  resize:none;
+  border-radius: 5px;
+  width:280px;
+  padding:9px;
+}
+   section#contact .contactIcon{
+     overflow: hidden;
+     clear:both;
+     margin-bottom:50px;
+   }
+  section#contact div.contactIcon p{
+     margin:20px auto;
+     font-size:2.0rem;
+   }
+  section#contact div.contactIcon a img{
+      width:70px;
+      margin-right:10px;
+      backgroud:#fff;
+    }
+  section#contact div.contactIcon a:hover{
+    opacity:0.8;
+      }
+
+  footer{
+    width:100%;
+    text-align:center;
+  }
+  footer small{
+    font-size:0.8rem;
+    padding-bottom:10px;
+    letter-spacing:2px;
+  }
