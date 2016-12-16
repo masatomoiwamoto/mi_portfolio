@@ -44,6 +44,7 @@
  <main id="main">
    <div class="hero">
      <h1><img src="img/hero.png" alt="hero"></h1>
+     <div class="frame1"></div>
      <div class="downbtn">
        <a href="#about"><img src="img/skill_icon/down.png" alt="down"></a>
      </div>
@@ -202,6 +203,14 @@
 <!--            Jquery           -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!--            script           -->
+<script src="js/jquery.frameAnimation.js"></script>
+<script>//frameAnimation実行コード
+
+$(function(){
+    $('.frame1').frameAnimation();
+});
+</script>
+
 <script src="js/s_scroll.js"></script>
 <script src="js/header_scroll.js"></script>
 <script src="js/header_down.js"></script>
